@@ -61,3 +61,32 @@ if __name__ == '__main__':
     scatter_plot()
 
     print("terminamos")
+
+scatter_plot(x, y):
+    # Crear figura y subgráfico
+    fig = plt.figure()
+    fig.suptitle('Gráfico Scatter: y = tanh(x)', fontsize=16)
+    ax = fig.add_subplot()
+
+    # Graficar
+    ax.scatter(x, y, color='darkcyan', marker='o', label='y = tanh(x)')
+    
+    # Personalización del gráfico
+    ax.set_facecolor('whitesmoke')
+    ax.set_xlabel("Eje X")
+    ax.set_ylabel("Eje Y")
+    ax.grid(True)
+    ax.legend()
+
+    # Mostrar
+    plt.show()
+if __name__ == '__main__':
+    print("Bienvenidos a otra clase con Python")
+    print("Scatter Plot")
+
+    x = np.arange(-np.pi, np.pi, 0.1)
+    y = np.tanh(x)
+
+    scatter_plot(x, y)
+
+    print("terminamos")
