@@ -95,3 +95,47 @@ if __name__ == '__main__':
     grid()
 
     print("terminamos")
+
+def grid():
+    # Veremos los distintos tipos de grids
+    x = np.linspace(0, 10, 40)
+    
+    fig = plt.figure()
+    fig.suptitle('Grilla con 4 funciones', fontsize=16)
+
+    # Definición de los 4 subgráficos en grilla 2x2
+    ax1 = fig.add_subplot(2, 2, 1)  # Primer subplot
+    ax2 = fig.add_subplot(2, 2, 2)  # Segundo subplot
+    ax3 = fig.add_subplot(2, 2, 3)  # Tercer subplot
+    ax4 = fig.add_subplot(2, 2, 4)  # Cuarto subplot
+
+    ax1.plot(x, y1, color='darkred', label='y1 = x**2')
+    ax1.set_facecolor('whitesmoke')
+    ax1.grid(ls='dashed')
+    ax1.set_ylabel("Y [amplitud]")
+    ax1.set_xlabel("X [rads]")
+    ax1.legend()
+
+    ax2.plot(x, y2, color='green', label='y2 = x**3')
+    ax2.set_facecolor('whitesmoke')
+    ax2.grid(ls='dashed')
+    ax2.set_ylabel("Y [amplitud]")
+    ax2.set_xlabel("X [rads]")
+    ax2.legend()
+
+    ax3.plot(x, y3, color='orange', label='y3 = x**4')
+    ax3.set_facecolor('whitesmoke')
+    ax3.grid(ls='dashed')
+    ax3.set_ylabel("Y [amplitud]")
+    ax3.set_xlabel("X [rads]")
+    ax3.legend()
+
+    ax4.plot(x, y4, color='blueviolet', label='y4 = sqrt(x)')
+    ax4.set_facecolor('whitesmoke')
+    ax4.grid(ls='dashed')
+    ax4.set_ylabel("Y [amplitud]")
+    ax4.set_xlabel("X [rads]")
+    ax4.legend()
+
+    plt.tight_layout()  # Acomoda automáticamente los subplots
+    plt.show()

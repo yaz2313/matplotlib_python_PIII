@@ -72,3 +72,27 @@ if __name__ == '__main__':
     multi_plot()  
 
     print("terminamos")
+
+def multi_plot(y1, y2):
+    # Dibujar múltiples líneas en un mismo gráfico
+    x = list(np.linspace(-4, 4, 20))
+    
+    fig = plt.figure()
+    ax = fig.add_subplot()
+
+    ax.plot(x, y1, color='green', marker='^', label='y1 = x**2')
+    ax.plot(x, y2, color='red', marker='+', label='y2 = x**3')
+    
+    ax.set_facecolor('whitesmoke')
+    ax.set_title("Dos funciones juntas")
+    ax.set_ylabel("Y[amplitud]")
+    ax.set_xlabel("X[rads]")
+    ax.set_xlim([-4, 4])  # Eje X limitado correctamente a [-4, 4]
+    ax.set_ylim([-70, 70])  # Ajustar según los valores
+    ax.legend()
+    
+    plt.show()
+    multi_plot(y1, y2)
+
+
+

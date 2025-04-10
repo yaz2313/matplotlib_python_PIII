@@ -61,3 +61,23 @@ if __name__ == '__main__':
     scatter_plot()
 
     print("terminamos")
+
+def scatter_plot():
+    # Demostración de la utilidad del scatter plot con tanh(x)
+    x = np.arange(-np.pi, np.pi, 0.1)
+    y = np.tanh(x)
+
+    fig = plt.figure()
+    fig.suptitle('Scatter Plot de tanh(x)', fontsize=16)
+    
+    ax = fig.add_subplot(1, 1, 1)  # Solo un subplot
+
+    ax.scatter(x, y, c='darkcyan', marker='x', label='y = tanh(x)')
+    ax.set_facecolor('whitesmoke')
+    ax.grid(True)
+    ax.set_xlabel("X [rads]")
+    ax.set_ylabel("Y [amplitud]")
+    ax.legend()
+    
+    plt.show() 
+    scatter_plot()
